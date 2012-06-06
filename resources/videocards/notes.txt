@@ -1,0 +1,22 @@
+Notes on using videocards / their drivers.
+Chris Cornelius
+Advanced Team Project 2012, skysphere project
+St. Olaf College
+
+
+1/6/12:
+  The linux command lspci shows all PCI cards installed.  I used it to figure out the 
+  manufacturer of the video/audio capture cards:
+	>lspci | grep "Capture"
+	06:00.0 Multimedia video controller: Brooktree Corporation Bt878 Video Capture (rev 11)
+	06:00.1 Multimedia controller: Brooktree Corporation Bt878 Audio Capture (rev 11)
+	06:02.0 Multimedia video controller: Brooktree Corporation Bt878 Video Capture (rev 11)
+	06:02.1 Multimedia controller: Brooktree Corporation Bt878 Audio Capture (rev 11)
+
+  Looks like there's one audio and one video device for each capture card.  I'm going to google to 
+  see if I can find drivers / information now.
+  
+  The Bt878 seems to be a chipset that's used on a lot of video cards.  I am pretty confident that
+  we can find Linux drivers for this chipset... but there's no way to find out the model number of
+  the capture cards unless we go and take a look inside the computer.  Not interested in shutting
+  specs down right now, so I'll move along.

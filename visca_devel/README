@@ -1,0 +1,8 @@
+visca_devel: DEPRECATED 1/20/2012 -- do all work in "trunk" branch now
+
+This folder holds initial work on the visca camera-control system.
+
+The CameraControl class represents a complete camera control system - it interfaces completely 
+with the camera via serial port.
+
+These elements will eventually be incorportated into the trunk.

@@ -1,0 +1,15 @@
+File format definition for .pano files (correspond to PanoImage objects).
+
+The header of the file consists of a first line with the line PANOIMAGE.
+
+Body of file is simply many lines, each with a filename and other metadata about all the ppm 
+images included a panorama.  Using tab-separated values.
+
+NOTE: Filenames are RELATIVE PATHS!  They will be decoded relative to the .pano file as it is read.
+
+FILENAME	CenterTheta	CenterPhi	WidthTheta	WidthPhi	Other flags...
+
+----- .pano file ------------------------------------------------------------------------------------------------------------------------
+PANOIMAGE
+Image_001.ppm	110.002453	12.0034124	20.022332	15.223452
+-----------------------------------------------------------------------------------------------------------------------------------------

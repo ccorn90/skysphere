@@ -1,0 +1,7 @@
+CAMERATERMINALCONFIG
+# this camera configruation is for all four cameras connected to specs
+PATH ./data/grabs
+PANOCAMERA l_cam L V4L2 /dev/video0 2 BRC300 /dev/ttyUSB1 1
+PANOCAMERA r_cam R V4L2 /dev/video1 2 BRC300 /dev/ttyUSB0 1
+PANOCAMERA l_hdcam HDL ERROR NULL 0 EVIHD1 /dev/ttyUSB2 1
+PANOCAMERA rt_hdcam HDR ERROR NULL 0 EVIHD1 /dev/ttyS0 1

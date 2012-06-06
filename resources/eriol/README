@@ -1,0 +1,12 @@
+resources/eriol:
+
+The eriol files were provided by Prof. Hall-Holt at the beginning of ATP 2012.
+The program eriol is an image viewer for ppm files which includes lots of
+functionality and is easily extended for other purposes.  We'll be using this
+code as a starting point for some of what we do.
+
+NOTE: eriolObjs.o is the only source of a lot of the object code for eriol.
+It is not included in the eriolMane or other cpp files that are available. So
+DO NOT DELETE IT!!!
+
+Also, I added a Makefile command to archive eriolObjs to a library and put it in the bin folder.

@@ -1,0 +1,29 @@
+image_devel: DEPRECATED 1/20/2012 -- do all work in "trunk" branch now.
+
+This folder holds initial work on the video card image capture system.
+
+These elements will eventually be incorportated into the trunk excecutable.
+
+The following are directions for setting up and running the cameras. Files have been moved so this is not entirely accurate yet:
+
+The Sony BRC-300 cameras are currently connected to the computer with S-video cables, and the following code can be used to view the cameras with xawtv:
+
+xawtv -c /dev/video0
+or
+xawtv -c /dev/video1
+
+for the second camera. You will need to set the options for xawtv to get 
+it to work. Video Source will need to be changed to S-Video and Capture 
+will need to be changed to grabdisplay. We have also had some trouble 
+when trying to use xawtv while ssh'd into the camera control computer. 
+It complains that the size of the displays aren't the same. Otherwise, 
+it works fine on the control computer.
+
+The current code for taking in images from the cameras can be found in the following directory:
+
+/home/wiebe/atp12-skysphere/image_devel
+
+The folder bin should contain ImageCaptureDriver. A single image can be aquired by inputting the following into the terminal from the image_devel folder:
+
+bin/ImageCaptureDriver
+ 

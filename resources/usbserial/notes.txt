@@ -1,0 +1,29 @@
+Notes on using USB-serial adaptors / their drivers.
+Chris Cornelius
+Advanced Team Project 2012, skysphere project
+St. Olaf College
+
+
+1/6/12:
+  This is looking to be easier than the videocards.  The USB-to-serial adaptors are made by the
+  company Keyspan, and their number is USA-19HS.  There's lots of info out there, mostly by Linux
+  users being upset that the company doesn't provide drivers for it.  I found some useful resources.
+
+  The USB-to-serial things mount to /dev/ttyUSB* ... and I made a little program called "serialtest"
+  which opens the device and tries to write to it.  That program with much thanks to The Internet,
+  where I found most of the code examples and ideas.  Make sure that you have permission to the
+  /dev/ttyUSB devices.  If you don't, you'll never open the serial port.  I found that the devices
+  are owned by root, which is correct, but that I wasn't part of the group that had access to them
+  Added my account to the Unix-to-Unix-Copy group (uucp) and that was that.
+
+  As far as drivers, I don't want to try much until we get a new computer to replace the specs
+  machine.  Not going to mess too much with something that works.  But...
+
+  A guy who wrote a Debian package with the driver:
+    http://www.denis.lemire.name/2007/10/19/ubuntu-keyspan/
+    One can download it, but I'm not sure how to install or make it work.
+
+  An Ubuntu error page which makes it sound like modern distros will ship with support for Keyspan
+  devices.  That'd be nice... maybe we just need to try installing a modern version of OS.
+    https://bugs.launchpad.net/ubuntu/+source/linux/+bug/149649
+    "[gutsy] keyspan serial drivers missing" (Ubuntu version 7.04)

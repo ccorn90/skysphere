@@ -1,0 +1,9 @@
+resources:
+
+Use this space for libraries, etc, that you don't want to store elsewhere.
+
+Make sure that things work in the *_devel and trunk branches without this dir!
+
+An Important Note About Libraries:
+When including a library such as liberiol.a it is IMPERATIVE that you specify the library AFTER the .o
+files which reference it.  For example, make sure to put -leriol at the end of the linking statement.

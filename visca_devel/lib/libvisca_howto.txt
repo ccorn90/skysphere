@@ -1,0 +1,21 @@
+1/4/12
+Chris Cornelius
+
+  To import the library libvisca, you need to make the file libvisca.a, which libvisca
+does not directly support because it uses libtool instead.  So go and build libvisca, then 
+use the command "ar cq libvisca.o libvisca_posix.o" to assemble the correct archive file.
+I modified the version of libvisca in "resources" to do this automatically.
+
+  To use the library in a Makefile, make sure to use the flag -lvisca AFTER the object files
+to which it is important.  Example:
+
+	##############################################################
+	## libvisca test
+	VISCA_LIBS = -lvisca
+
+	# one of the examples from libvisca
+	build/testvisca.o: src/testvisca.c
+		$(CC) $(CFLAGS) -o build/testvisca.o src/testvisca.c
+
+	bin/testvisca: build/testvisca.o 
+		$(CC) $(LFLAGS) -o bin/testvisca build/testvisca.o $(VISCA_LIBS)
