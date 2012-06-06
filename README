@@ -1,0 +1,11 @@
+Creation of Panoramic Images using Robotic Cameras
+Chris Cornelius, Charles Nye, Ian McGinnis
+St. Olaf College 2012
+Advisor: Olaf Hall-Holt
+
+--- Summary ---
+Using Sony remote-controllable cameras, captures and stitches together panoramic images.
+Look in the trunk directory for up-to-date code.
+
+--- Credits ---
+This project extends work done by Daniel Wiebe and by Prof. Hall-Holt.
